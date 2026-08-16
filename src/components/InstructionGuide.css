@@ -1,0 +1,166 @@
+.instruction-guide-container {
+  padding: 32px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.guide-header {
+  text-align: center;
+  border-bottom: 1px solid var(--glass-border);
+  padding-bottom: 16px;
+}
+
+.guide-header h2 {
+  color: var(--secondary);
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+.guide-header p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.step-card {
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--glass-border);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.step-card-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 12px;
+}
+
+.step-card-header h3 {
+  color: var(--text-main);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.step-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.code-block-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.block-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.block-tag {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.user-tag {
+  background: rgba(168, 85, 247, 0.15); /* Purple */
+  color: #c084fc;
+  border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.ai-tag {
+  background: rgba(236, 72, 153, 0.15); /* Pink */
+  color: #f472b6;
+  border: 1px solid rgba(236, 72, 153, 0.3);
+}
+
+.prompt-text-box {
+  background: rgba(168, 85, 247, 0.03);
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(168, 85, 247, 0.15);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #e2e8f0;
+  text-align: left;
+}
+
+.step-prompt {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid var(--glass-border);
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 0.85rem;
+  color: #e2e8f0;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+  max-height: 250px;
+  overflow-y: auto;
+  text-align: left;
+}
+
+.copy-btn {
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  box-shadow: none;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.copy-btn:hover:not(:disabled) {
+  background: rgba(99, 102, 241, 0.15);
+  border-color: var(--primary);
+  transform: translateY(-1px);
+}
+
+.copy-btn.copied {
+  background: var(--success);
+  border-color: var(--success);
+  color: white;
+}
+
+/* 기획 에이전트 지침서 카드 전용 스타일 */
+.agent-instructions-card {
+  padding: 24px;
+  background: rgba(245, 158, 11, 0.02); /* Amber/Gold */
+  border: 1px solid rgba(245, 158, 11, 0.15);
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.agent-instructions-card h3 {
+  color: #f59e0b !important; /* Amber */
+  font-size: 1.25rem;
+}
+
+.agent-prompt-block {
+  border-color: rgba(245, 158, 11, 0.15) !important;
+  background: rgba(245, 158, 11, 0.01) !important;
+  color: #fef3c7 !important;
+}
+
+@media (max-width: 600px) {
+  .block-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}

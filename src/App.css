@@ -66,3 +66,54 @@
   display: inline-block;
   border: 1px solid rgba(239, 68, 68, 0.2);
 }
+
+/* 예시 시험지 다운로드 섹션 스타일 */
+.example-download-section {
+  padding: 24px;
+  width: 100%;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid var(--glass-border);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.example-download-section h4 {
+  font-size: 1.1rem;
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+.example-download-section p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.download-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.download-btn {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  box-shadow: none;
+  font-size: 0.9rem;
+  padding: 8px 16px;
+}
+
+.download-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--primary);
+}
+
+@media (max-width: 600px) {
+  .download-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

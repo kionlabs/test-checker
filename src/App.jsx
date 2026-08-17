@@ -127,6 +127,22 @@ function App() {
                 </div>
               </>
             )}
+
+            {/* 메인 페이지 상태에서 파일 업로드 전일 때만 다운로드 영역 표시 */}
+            {status === 'idle' && !file && (
+              <div className="example-download-section glass-panel animate-fade-in">
+                <h4>📥 시연용 예시 시험지 다운로드</h4>
+                <p>아래 시험지 이미지를 다운로드하여 즉시 AI 채점 성능을 테스트해 보세요.</p>
+                <div className="download-buttons">
+                  <a href="/2025숭덕고_수학_중간고사.jpeg" download className="btn download-btn">
+                    📐 수학 시험지 다운로드
+                  </a>
+                  <a href="/영어시험지.jpeg" download className="btn download-btn">
+                    🔤 영어 시험지 다운로드
+                  </a>
+                </div>
+              </div>
+            )}
           </>
         )}
       </main>
